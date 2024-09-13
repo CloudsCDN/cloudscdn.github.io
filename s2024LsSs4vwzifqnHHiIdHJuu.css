@@ -1,0 +1,326 @@
+/*
+---------------------------------
+FSodic CSS Framework
+Sepaku, 19 November 2023
+https://www.fsodic.com
+https://www.fsodic.com/dev/themes
+---------------------------------
+*/
+
+html {
+  --fs1c: #de1339;
+  --fs2c: #202124;
+  --fs3c: #232b34;
+  --fs4c: #62666b;
+  --fs5c: #d2d6db;
+  --fs6c: #e2e6eb;
+  --fs7c: #f0f4f8;
+  --fs8c: #e91e63;
+  --fsi1c: #de1339;
+  --fsi2c: #de1339aa;
+  --fs1sh: 0 5px 5px -3px #00000033, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
+  --fs2sh: 0 4px 4px -3px #00000033, 0 4px 5px 1px #00000024, 0 3px 7px 2px #0000001f;
+  
+  --fonts: "FSSans", sans-serif, serif;
+  --fontsCode: "Fira Code", monospace;
+  --dp: 8px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  background: var(--fs3c);
+  padding: 2px;
+  width: var(--dp);
+  height: var(--dp);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--fs1c);
+  border-radius: calc(var(--dp) * .5);
+}
+body {
+  background: #fff;
+  font-size: 16px;
+  font-family: var(--fonts);
+  color: var(--fs2c);
+}
+textarea, input, button, select, label {
+  display: block;
+  background: transparent;
+  color: var(--fs3c);
+  border: 0 solid;
+  font-family: var(--fonts);
+  line-height: 1.25;
+}
+:focus {
+  outline: 0;
+}
+::placeholder {
+  color: var(--fs4c);
+}
+a {
+  color: var(--fs1c);
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+ul, ol {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3 {
+  font-weight: 600;
+}
+h4, h5 {
+  font-weight: 400;
+}
+h6 {
+  font-weight: 300;
+  font-size: 12px;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 20px;
+}
+h3,
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 14px;
+}
+.fl {
+  display: flex;
+}
+.fl.fl-ca {
+  align-items: center;
+}
+.fl.fl-sa {
+  align-items: flex-start;
+}
+.fl.fl-ea {
+  align-items: flex-end;
+}
+.fl.fl-cj {
+  justify-content: center;
+}
+.fl.fl-sj {
+  justify-content: flex-start;
+}
+.fl.fl-ej {
+  justify-content: flex-end;
+}
+.fl.fl-cc {
+  justify-content: center;
+  align-items: center;
+}
+.fl.fl-dco {
+  flex-direction: column;
+}
+.fl.fl-sba {
+  align-items: space-between;
+}
+.fl.fl-sbj {
+  justify-content: space-between;
+}
+.fl.fl-wr {
+  flex-wrap: wrap;
+}
+.fl.fl-dcor {
+  flex-direction: column-reverse;
+}
+.fl.fl-dror {
+  flex-direction: row-reverse;
+}
+.teX {
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.__vh0,
+.__vh0a:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.__vh1,
+.__vh1a:after {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.po.ab,
+.po.aba:after {
+  position: absolute;
+}
+.po.fi,
+.po.fia:after {
+  position: fixed;
+}
+.po.re,
+.po.rea:after {
+  position: relative;
+}
+.po.st,
+.po.sta:after {
+  position: sticky;
+}
+.cont {
+  max-width: calc(var(--dp) * 152);
+  margin: 0 auto;
+  padding: 0 calc(var(--dp) * 2);
+}
+.cont-fl {
+  padding: 0 calc(var(--dp) * 4);
+}
+.hdd {
+  display: none;
+}
+.taC {
+  text-align: center;
+}
+.taL {
+  text-align: left;
+}
+.taR {
+  text-align: right;
+}
+.taJ {
+  text-align: justify;
+}
+.bra50 {
+  border-radius: 50%;
+}
+.__cuSe a {
+  padding: 0 calc(var(--dp) * 1.5);
+  min-height: calc(var(--dp) * 4);
+  border-radius: calc(var(--dp) * .5);
+}
+.__cuSe a:after {
+  content: "expandDown";
+  font-family: "FSIcon";
+  right: 0;
+  padding-right: calc(var(--dp) * 1.5);
+  transform: rotateX(0deg);
+  transition: all .3s linear;
+}
+.__cuSe a.cuOpen:after {
+  transform: rotateX(180deg);
+}
+.__cuSe a:hover {
+  background: var(--fs7c);
+}
+.__cuSe ul {
+  background: #fff;
+  box-shadow: var(--fs1sh);
+  padding: calc(var(--dp) 0);
+  min-width: calc(var(--dp) * 12);
+  border-radius: calc(var(--dp) * .5);
+  padding: var(--dp) 0;
+}
+.__cuSe ul li {
+  padding: 0 calc(var(--dp) * 1.5);
+  line-height: calc(var(--dp) * 4);
+  cursor: pointer;
+}
+.__cuSe ul li.optSelected {
+  font-weight: 600;
+  user-select: none;
+}
+.__cuSe ul li:hover {
+  background: var(--fs1c);
+  color: #fff;
+}
+.cuOpt {
+  transform: rotateX(90deg);
+  transition: all .3s linear;
+  visibility: hidden;
+  opacity: 0;
+}
+.__cuSe a.cuOpen ~ .cuOpt {
+  visibility: visible;
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+.fslo {
+  z-index: 1000;
+  color: #fff;
+}
+.fslo:after {
+  background-color: var(--fs3c);
+  content: "";
+  opacity: .8;
+}
+.fslo i.fsi {
+  font-size: 64px;
+  z-index: 1;
+}
+.fslo i.fsi.fsi-fsodic:after {
+  font-size: 72px;
+  transform: rotate3d(0, 0, 0, 0deg);
+  animation: fsLo 2.4s infinite linear;
+}
+.fslo i.fsi.fsi-fsodic:before {
+  color: #fff;
+  animation: fsxLo 2.4s infinite linear;
+  transform: scale(1);
+}
+@keyframes fsLo {
+  0 {
+    transform: rotate(0deg);
+    color: var(fs1c);
+  }
+  100% {
+    transform: rotate(360deg);
+    color: var(--fs8c);
+  }
+}
+@keyframes fsxLo {
+  0,100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+}
+.nTc {
+  background: #eee;
+  padding: calc(var(--dp) * 1.5) calc(var(--dp) * 2);
+  gap: calc(var(--dp) * 1.5);
+  border: 1px solid #0002;
+  border-radius: calc(var(--dp) * .5);
+  color: #fff;
+}
+.nTc i {
+  font-size: 24px;
+  color: #0004;
+}
+.nTc p {
+  width: calc(100% - var(--dp) * 4);
+}
+.nTc a {
+  color: inherit;
+  text-decoration: underline;
+}
+.nTc.nTcE {
+  background: #dc3545;
+}
+.nTc.nTcI {
+  background: #2196F3;
+}
+.nTc.nTcS {
+  background: #009688;
+}
+.nTc.nTcW {
+  background: #FF5722;
+}
